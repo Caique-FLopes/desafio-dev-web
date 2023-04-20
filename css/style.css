@@ -1,0 +1,287 @@
+/* --- CSS RESET --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Header --- */
+header{
+  display: flex;
+  justify-content: space-around;
+  background-color: #fbfbfb;
+}
+
+header .logo-header img{
+  max-width: 80px;
+  max-height: 80px;
+}
+
+header .navegacao{
+ display: flex;
+ align-items: center;
+}
+
+header .navegacao ul{
+  display: flex;
+  align-items: space-between;
+  justify-content: space-evenly;
+}
+
+header .navegacao ul li{
+  margin: 10px ;
+}
+
+header .navegacao ul li .item-navegacao{
+  text-decoration: none;
+  color: #414141;
+  padding: 10px 5px;
+}
+
+header .navegacao ul li .item-navegacao {
+  position: relative;
+  text-decoration: none;
+  color: #fbfbfb(233, 224, 224);
+  font-size: 18px;
+  letter-spacing: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+header .navegacao ul li .item-navegacao:before,
+header .navegacao ul li .item-navegacao:after{
+  content:"";
+  position:absolute;
+  height: 3px;
+  width: 0;
+  background: rgb(231, 45, 45);
+  transition: .4s;
+}
+
+header .navegacao ul li .item-navegacao:after{
+  left: 0;
+  bottom: -10px;
+}
+
+header .navegacao ul li .item-navegacao::before{
+  right: 0;
+  top: -10px;
+}
+
+header .navegacao ul li .item-navegacao:hover:after,
+header .navegacao ul li .item-navegacao:hover:before{
+  width: 100%;
+}
+header .hamburger{
+  display: none;
+  margin: auto 10px;
+}
+header .hamburger .bar{
+  display: block;
+  background-color: #414141;
+  height: 3px;
+  width: 25px;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+section, h2{
+  margin-bottom: 100px;
+}
+#espaco-banner .banner{
+  margin: 10px;
+  display: flex;
+  border-radius: 20px;
+}
+#espaco-banner .banner .img-banner{
+  background-image: url('/img/death-star.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  width: 50%;
+  border-radius: 25px 0px 0px 25px;
+}
+
+
+#espaco-banner .banner .conteudo-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  width: 50%;
+  border-radius: 0 25px 25px 0;
+  padding: 0 20px;
+}
+#espaco-banner .banner .conteudo-banner .titulo-banner{
+  font-size: 40px;
+  color: #fbfbfb;
+  font-weight: 700;
+}
+#espaco-banner .banner .conteudo-banner .texto-banner{
+  color: #fbfbfb;
+  text-align: justify;
+  line-height: 200%;
+}
+
+#parceiros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#parceiros h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+#parceiros .logo-parceiros{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+#parceiros .logo-parceiros a img{
+  max-width: 200px;
+  max-height: 200px;
+}
+#mais-vendidos h2{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+#mais-vendidos .slide-itens{
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#mais-vendidos .slide-itens .item{
+  border-radius: 25px;
+  height: 400px;
+  width: 250px;
+  background-color: #414141;
+  box-shadow: 4px 4px 4px #808080;
+}
+#mais-vendidos .slide-itens .item:hover{
+  transform: scale(1.2, 1.2);
+  transition: 0.3s;
+}
+#mais-vendidos .slide-itens .item .img-mais-vendido{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px 25px 0 0;
+  height: 250px;
+  width: 250px;
+}
+#mais-vendidos .slide-itens .item .descricao-mais-vendido{
+  padding: 8px;
+  color: #fbfbfb;
+  text-align: justify;
+}
+#mais-vendidos .slide-itens .item .valor-ver-mais{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+#mais-vendidos .slide-itens .item .valor-ver-mais span{
+  color: #02b34c;
+  font-weight: 700;
+}
+#mais-vendidos .slide-itens .item .valor-ver-mais a{
+  color: #fbfbfb;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 2px solid #fbfbfb;
+  border-radius: 20px;
+}
+#mais-vendidos .slide-itens .item .valor-ver-mais a:hover{
+  background-color: #fbfbfb;
+  color: #414141;
+}
+
+@media (max-width: 768px){
+  .navegacao{
+    position: fixed;
+    left: 100%;
+    top: 7.5rem;
+    flex-direction: column;
+    background-color: #dfe3f7;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px #000;
+  }
+  .item-navegacao{
+    color: #000;
+  }
+  .navegacao.active{
+    left: 0;
+  }
+  .nav-item{
+    margin: 2.5rem 0;
+  }
+  header .hamburger{
+    display: block;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(45deg);
+  }
+  #parceiros .logo-parceiros{
+    flex-direction: column;
+  }
+  #mais-vendidos .slide-itens{
+   flex-direction: column;
+  }
+  #mais-vendidos .slide-itens .item{
+    margin: 10px auto;
+  }
+}
