@@ -125,6 +125,7 @@ header .hamburger .bar{
   width: 25px;
   margin: 5px auto;
   border-radius: 10px;
+  transition: 1s;
 }
 section, h2{
   margin-bottom: 100px;
@@ -257,6 +258,7 @@ section, h2{
   }
   .navegacao.active{
     left: 0;
+    top: 90px;
   }
   .nav-item{
     margin: 2.5rem 0;
@@ -268,12 +270,17 @@ section, h2{
   }
   .hamburger.active .bar:nth-child(2){
     opacity: 0;
+    transition: 1s;
   }
   .hamburger.active .bar:nth-child(1){
     transform: translateY(8px) rotate(-45deg);
+    transition: 1s;
+
   }
   .hamburger.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(45deg);
+    transition: 1s;
+
   }
   #parceiros .logo-parceiros{
     flex-direction: column;
@@ -283,5 +290,8 @@ section, h2{
   }
   #mais-vendidos .slide-itens .item{
     margin: 10px auto;
+  }
+  header .navegacao ul{
+    flex-direction: column;
   }
 }
